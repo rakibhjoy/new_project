@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="CSS/style.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <!-- Navbar Section Start -->
+  <nav style="background-color: white; color: black;">
+    <div class="container py-2">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="IMG/logo.png" alt="Logo" style="height: 70px;">
+        </a>
+
+        <div class="input-group my-1 my-md-0" style="max-width: 500px;">
+          <input type="text" class="form-control ms-3" placeholder="What are you looking for today?" aria-label="Search"
+            style="padding: 5px; border: 2px solid #000000; ">
+          <button class="btn -ms-4" type="button" aria-label="Search Button"
+            style="background-color: black; border: 2px solid black; color: white;">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+
+        <!-- Shopping Cart Icon -->
+        <div class="d-flex nav-icons d-none d-lg-block">
+          <a href="#" id="cartIcon" class="position-relative text-gray-800 hover:text-gray-600"
+            aria-label="Shopping Cart">
+            <img src="IMG/cart.png" alt="Cart Icon" style="width: 50px; height: 60px;">
+            <span id="cartCount"
+              class="position-absolute bg-danger text-white text-xl-start font-semibold rounded-circle d-flex align-items-center justify-content"
+              style="top: -10px; right: -15px; width: 20px; height: 20px; padding-left: 5px;">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar Section End -->
+
+
+
+
+
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+
+          <div class="d-lg-none d-flex justify-content-between w-100">
+
+            <div>
+              <a href="#" id="cartIcon_mini" class=" position-relative text-gray-800 hover:text-gray-600"
+                aria-label="Shopping Cart">
+                <img src="IMG/cart-removebg-preview.png" alt="Cart Icon" style="width: 40px; height: 50px;">
+                <span id="cartCount_mini"
+                  class="position-absolute bg-danger text-white text-xl-start font-semibold rounded-circle d-flex align-items-center justify-content"
+                  style="top: -10px; right: -15px; width: 20px; height: 20px; padding-left: 4px;">0</span>
+              </a>
+            </div>
+
+            <div class="">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <div class="position-static top-5 px-3">
+                  <img src="IMG/burger.jpg" alt="Cart Icon" style="width: 30px; height: 40px;">
+                </div>
+              </button>
+            </div>
+          </div>
+
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">BEDDING PRODUCT <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                  <li><a href="bedsheetproduct.html">Extra King</a></li>
+                  <li><a href="">king</a></li>
+                  <li><a href="">Semi Double</a></li>
+                  <li><a href="">Single</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">HOME DECOR <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                  <li><a href="">Elegant Essentials</a></li>
+                  <li><a href="">Cozy Corners</a></li>
+                  <li><a href="">Artisan Accents</a></li>
+                  <li><a href="">Gleaming Glow</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="checkout.html">CHECKOUT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+    </div>
+    </div>
+    </nav>
+    </div>
+  </header>
+
+
+  <!-- Cart Sidebar -->
+  <div id="cartSidebar" class="cart-sidebar">
+    <button id="closeCart" class="close-btn">&times;</button>
+    <h2>Your Cart</h2>
+    <div class="cart-items">
+      <!-- Cart items will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Fetures  -->
+  <section>
+    <div class="container">
+      <div class="row py-4 my-1">
+        <div class="col-12 col-md-5">
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" style="border-radius: 25px;">
+              <div class="carousel-item active">
+                <img src="IMG/pre3.jpg" class="d-block w-100 fixed-size" alt="Image 1">
+              </div>
+              <div class="carousel-item">
+                <img src="IMG/pre1.jpg" class="d-block w-100 fixed-size" alt="Image 2">
+              </div>
+              <div class="carousel-item">
+                <img src="IMG/pre4.jpg" class="d-block w-100 fixed-size" alt="Image 3">
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-7 m-auto" style="text-align:center">
+          <h1 style="font-size: 7rem !important;">Prime Tex</h1>
+
+          <h5>Curtain & Bedding Solutions</h5>
+          <div class="row justify-content-center">
+            <!-- Bedding Solutions Section -->
+            <div class="col-4 bedding-solution m-2" style="border-radius: 10px; color: white;">
+              <h5 class="m-2">Bedding <br>Solutions</h5>
+            </div>
+
+            <!-- Curtain Solutions Section -->
+            <div class="col-4 curtain-solution m-2" style="border-radius: 10px; color: white;">
+              <h5 class="m-2">Curtain <br>Solutions</h5>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Product Section -->
+  <section>
+    <div class="container">
+      <h3 class="h3 text-center py-4">MOST SELLING BEDSHEETS</h3>
+      <div class="row">
+        <!-- Product Card Example -->
+        <div class="col-md-3 col-sm-6">
+          <div class="product-grid2">
+            <div class="product-image2">
+              <a href="#">
+                <img class="pic-1" src="IMG/8.jpg">
+                <img class="pic-2" src="IMG/9.jpg">
+              </a>
+              <ul class="social">
+                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+              </ul>
+              <a class="add-to-cart" href="#" data-title="Women's Designer Top" data-price="$599.99">Add to cart</a>
+            </div>
+            <div class="product-content">
+              <h3 class="title"><a href="viewp.html">Women's Designer Top</a></h3>
+              <span class="price">$599.99</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card Example -->
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-grid2">
+            <div class="product-image2">
+              <a href="#">
+                <img class="pic-1" src="IMG/10.jpg">
+                <img class="pic-2" src="IMG/11.jpg">
+              </a>
+              <ul class="social">
+                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+              </ul>
+              <a class="add-to-cart" href="#" data-title="Women's Designer Top" data-price="$599.99">Add to cart</a>
+            </div>
+            <div class="product-content">
+              <h3 class="title"><a href="viewp.html">Women's Designer Top</a></h3>
+              <span class="price">$599.99</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card Example -->
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-grid2">
+            <div class="product-image2">
+              <a href="#">
+                <img class="pic-1" src="IMG/12.webp">
+                <img class="pic-2" src="IMG/14.jpg">
+              </a>
+              <ul class="social">
+                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+              </ul>
+              <a class="add-to-cart" href="#" data-title="Women's Designer Top" data-price="$599.99">Add to cart</a>
+            </div>
+            <div class="product-content">
+              <h3 class="title"><a href="viewp.html">Women's Designer Top</a></h3>
+              <span class="price">$599.99</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card Example -->
+
+        <div class="col-md-3 col-sm-6">
+          <div class="product-grid2">
+            <div class="product-image2">
+              <a href="#">
+                <img class="pic-1" src="IMG/14.webp">
+                <img class="pic-2" src="IMG/15.jpg">
+              </a>
+              <ul class="social">
+                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+              </ul>
+              <a class="add-to-cart" href="#" data-title="Women's Designer Top" data-price="$599.99">Add to cart</a>
+            </div>
+            <div class="product-content">
+              <h3 class="title"><a href="#">Women's Designer Top</a></h3>
+              <span class="price">$599.99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BED COVER & SHEET -->
+
+  <section>
+    <div class="container">
+      <h3 class="h3 text-center py-4">MOST SELLING CURTAIN</h3>
+      <div class="row">
+        <!-- Product Card Example -->
+        <div class="col-md-3 col-sm-6">
+          <div class="product-grid2">
+            <div class="product-image2">
+              <a href="#">
+                <img class="pic-1" src="IMG/17.webp">
+                <img class="pic-2" src="IMG/18.webp">
+              </a>
+              <ul class="social">
+                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+              </ul>
+              <a class="f" href="#" data-title="Women's Designer Top" data-price="$599.99">Add to cart</a>
+            </div>
+            <div class="product-content">
+              <h3 class="title"><a href="viewp.html">Women's Designer Top</a></h3>
+              <span class="price">$599.99</span>
+            </div>
+          </div>
+        </div>
+        <!-- Product Card Example -->
+        <div class="col-md-3 col-sm-6">
+          <div class="product-grid2">
+            <div class="product-image2">
+              <a href="#">
+                <img class="pic-1" src="IMG/19.jpg">
+                <img class="pic-2" src="IMG/20.jpg">
+              </a>
+              <ul class="social">
+                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+              </ul>
+              <a class="add-to-cart" href="#" data-title="Women's Designer Top" data-price="$599.99">Add to cart</a>
+            </div>
+            <div class="product-content">
+              <h3 class="title"><a href="#">Women's Designer Top</a></h3>
+              <span class="price">$599.99</span>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- Product Card Example -->
+        <div class="col-md-3 col-sm-6">
+          <div class="product-grid2">
+            <div class="product-image2">
+              <a href="#">
+                <img class="pic-1" src="IMG/21.webp">
+                <img class="pic-2" src="IMG/22.jpg">
+              </a>
+              <ul class="social">
+                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+              </ul>
+              <a class="add-to-cart" href="#" data-title="Women's Designer Top" data-price="$599.99">Add to cart</a>
+            </div>
+            <div class="product-content">
+              <h3 class="title"><a href="#">Women's Designer Top</a></h3>
+              <span class="price">$599.99</span>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- Product Card Example -->
+        <div class="col-md-3 col-sm-6">
+          <div class="product-grid2">
+            <div class="product-image2">
+              <a href="#">
+                <img class="pic-1" src="IMG/23.jpg">
+                <img class="pic-2" src="IMG/24.jpg">
+              </a>
+              <ul class="social">
+                <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+              </ul>
+              <a class="add-to-cart" href="#" data-title="Women's Designer Top" data-price="$599.99">Add to cart</a>
+            </div>
+            <div class="product-content">
+              <h3 class="title"><a href="#">Women's Designer Top</a></h3>
+              <span class="price">$599.99</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- bedpicture -->
+
+  <section style="position: relative; width: 100%;">
+    <div style="position: relative;">
+      <img src="IMG/bedwide1.jpg" alt="" style="width: 100%; height: auto;">
+      <div
+        style="position: absolute; top: 50%; left: 55%; transform: translateY(-50%); color: white; background-color: rgba(0, 0, 0, 0.5); padding: 20px; max-width: 40%; text-justify: auto;">
+        <h6>Premium Quality Bedsheets for a Comfortable Sleep</h6>
+        <!-- <p>Transform your bedroom into a cozy retreat with our luxurious bedsheets, crafted to combine style, comfort,
+          and durability. Made from high-quality materials, our bedsheets offer a soft, smooth feel, perfect for a
+          restful night’s sleep. Available in a variety of colors, designs, and sizes, they effortlessly complement any
+          bedroom decor, from classic to modern.</p> -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- others card -->
+  <!-- <section>
+    <div class="container my-5">
+      <div class="row text-center">
+        <div class="col-md-3">
+          <div class="p-4 bg-success text-white">
+            <div class="fs-1 mb-2">💰</div>
+            <h5 class="fw-bold">10 Days Return</h5>
+            <p>Easy Exchange and Return</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-4 bg-info text-white">
+            <div class="fs-1 mb-2">🚚</div>
+            <h5 class="fw-bold">Free Shipping</h5>
+            <p>over BDT 5000</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-4 bg-danger text-white">
+            <div class="fs-1 mb-2">📅</div>
+            <h5 class="fw-bold">Best Deal In Town</h5>
+            <p>Guarantee</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-4 bg-warning text-dark">
+            <div class="fs-1 mb-2">☂️</div>
+            <h5 class="fw-bold">Export Quality</h5>
+            <p>Assurance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- client review -->
+
+  <div class="container py-4">
+    <section>
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10 col-xl-8 text-center">
+          <h3 class="mb-4">Client Satisfaction</h3>
+          <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+            <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
+            numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
+            quisquam eum porro a pariatur veniam. -->
+          </p>
+        </div>
+      </div>
+
+      <div class="row text-center d-flex align-items-stretch">
+        <div class="col-md-4 mb-5 mb-md-0 d-flex align-items-stretch">
+          <div class="card testimonial-card">
+            <div class="card-up" style="background-color: #9d789b;"></div>
+            <div class="avatar mx-auto bg-white">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" class="rounded-circle img-fluid" />
+            </div>
+            <div class="card-body">
+              <h4 class="mb-4">Maria Smantha</h4>
+              <hr />
+              <p class="dark-grey-text mt-4">
+                <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet eos adipisci,
+                consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5 mb-md-0 d-flex align-items-stretch">
+          <div class="card testimonial-card">
+            <div class="card-up" style="background-color: #7a81a8;"></div>
+            <div class="avatar mx-auto bg-white">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp" class="rounded-circle img-fluid" />
+            </div>
+            <div class="card-body">
+              <h4 class="mb-4">Lisa Cudrow</h4>
+              <hr />
+              <p class="dark-grey-text mt-4">
+                <i class="fas fa-quote-left pe-2"></i>Neque cupiditate assumenda in maiores
+                repudi mollitia architecto.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-0 d-flex align-items-stretch">
+          <div class="card testimonial-card">
+            <div class="card-up" style="background-color: #6d5b98;"></div>
+            <div class="avatar mx-auto bg-white">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" class="rounded-circle img-fluid" />
+            </div>
+            <div class="card-body">
+              <h4 class="mb-4">John Smith</h4>
+              <hr />
+              <p class="dark-grey-text mt-4">
+                <i class="fas fa-quote-left pe-2"></i>Delectus impedit saepe officiis ab
+                aliquam repellat rem unde ducimus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <br>
+
+
+  <!-- footer -->
+  <div class="">
+
+    <footer class="bg-black text-center text-lg-start text-white">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row my-4">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+            <div
+              class="rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"
+              style="width: 150px; height: 150px;">
+              <img src="IMG/logo.png" height="70" alt="" loading="lazy" />
+            </div>
+
+            <p class="text-center">Shop premium bedsheets, curtains, and pillows online for stylish and cozy home essentials!</p>
+
+            <ul class="list-unstyled d-flex flex-row justify-content-center">
+              <li>
+                <a class="text-white px-2" href="#!">
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+              </li>
+              <li>
+                <a class="text-white px-2" href="#!">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a class="text-white ps-2" href="#!">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Quick Link</h5>
+
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>When your pet is missing</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>Recently found</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>How to adopt?</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>Pets for adoption</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>Material gifts</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>Help with walks</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>Volunteer activities</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4"></h5>
+
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>General information</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>About the shelter</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>Statistic data</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>Job</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>Tenders</a>
+              </li>
+              <li class="mb-2">
+                <a href="#!" class="text-white"><i class=""></i>Contact</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Contact</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <p><i class="fas fa-map-marker-alt pe-2"></i>Warsaw, 57 Street, Poland</p>
+              </li>
+              <li>
+                <p><i class="fas fa-phone pe-2"></i>+ 01 234 567 89</p>
+              </li>
+              <li>
+                <p><i class="fas fa-envelope pe-2 mb-0"></i>contact@example.com</p>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+    </footer>
+
+    <section class="container-fluid">
+      <div class="row align-items-center text-white" style="background-color: blue; padding: 15px;">
+        <!-- Left Side - Copyright (col-4) -->
+        <div class="col-12 col-md-4 text-center text-md-start d-flex flex-column justify-content-center mb-3 mb-md-0">
+          <span style="font-size: 15px;">© 2020 Copyright:</span>
+          <a href="https://sbitsbd.com/" target="_blank"
+            style="font-size: 18px; font-weight: bold; color: white; text-decoration: none;">SBITS</a>
+        </div>
+
+        <!-- Right Side - Payment Methods (col-8) -->
+        <div class="col-12 col-md-8 d-flex justify-content-end align-items-center">
+          <!-- Visa -->
+          <div class="payment-method text-center mx-2">
+            <i class="fab fa-cc-visa" style="font-size: 40px;"></i>
+          </div>
+          <!-- MasterCard -->
+          <div class="payment-method text-center mx-2">
+            <i class="fab fa-cc-mastercard" style="font-size: 40px;"></i>
+          </div>
+          <!-- bKash -->
+          <div class="payment-method text-center mx-2">
+            <img src="IMG/bkash.png" alt="bKash" style="height: 35px;">
+          </div>
+          <!-- Rocket -->
+          <div class="payment-method text-center mx-2">
+            <img src="IMG/rocket.png" alt="Rocket" style="height: 35px;">
+          </div>
+          <!-- Cash on Delivery -->
+          <div class="payment-method text-center mx-2">
+            <i class="fas fa-truck" style="font-size: 40px;"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- strt Payment -->
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const cartSidebar = document.getElementById('cartSidebar');
+      const cartIcon = document.getElementById('cartIcon');
+      const cartIcon_mini = document.getElementById('cartIcon_mini');
+      const closeCart = document.getElementById('closeCart');
+      const addToCartButtons = document.querySelectorAll('.add-to-cart');
+      const cartItemsContainer = document.querySelector('.cart-items');
+      const cartCount = document.getElementById('cartCount');
+      const cartCount_mini = document.getElementById('cartCount_mini'); // Element to display cart count
+
+      // Cart object to keep track of items
+      let cart = {};
+
+      // Toggle cart sidebar open/close
+      cartIcon.addEventListener('click', function (e) {
+        e.preventDefault();
+        cartSidebar.classList.toggle('open');
+      });
+      cartIcon_mini.addEventListener('click', function (e) {
+        e.preventDefault();
+        cartSidebar.classList.toggle('open');
+      });
+
+      closeCart.addEventListener('click', function () {
+        cartSidebar.classList.remove('open');
+      });
+
+      // Add item to cart
+      addToCartButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const title = this.getAttribute('data-title');
+          const price = parseFloat(this.getAttribute('data-price').replace('$', ''));
+
+          // Check if item already in cart
+          if (cart[title]) {
+            cart[title].quantity++;
+          } else {
+            cart[title] = { price, quantity: 1 };
+          }
+
+          updateCart();
+        });
+      });
+
+      // Function to update cart display
+      function updateCart() {
+        cartItemsContainer.innerHTML = '';
+
+        for (const [title, item] of Object.entries(cart)) {
+          const cartItem = document.createElement('div');
+          cartItem.classList.add('cart-item');
+          cartItem.innerHTML = `
+        <p>${title}</p>
+        <span>$${(item.price * item.quantity).toFixed(2)}</span>
+        <div class="quantity-control">
+          <button class="decrease" data-title="${title}">-</button>
+          <span>${item.quantity}</span>
+          <button class="increase" data-title="${title}">+</button>
+        </div>
+        <button class="remove-item" data-title="${title}">Remove</button>
+      `;
+
+          cartItemsContainer.appendChild(cartItem);
+        }
+
+        updateCartCount();
+        addCartControls();
+      }
+
+      // Function to add increase, decrease, and remove functionality
+      function addCartControls() {
+        document.querySelectorAll('.increase').forEach(button => {
+          button.addEventListener('click', function () {
+            const title = this.getAttribute('data-title');
+            cart[title].quantity++;
+            updateCart();
+          });
+        });
+
+        document.querySelectorAll('.decrease').forEach(button => {
+          button.addEventListener('click', function () {
+            const title = this.getAttribute('data-title');
+            if (cart[title].quantity > 1) {
+              cart[title].quantity--;
+            } else {
+              delete cart[title];
+            }
+            updateCart();
+          });
+        });
+
+        document.querySelectorAll('.remove-item').forEach(button => {
+          button.addEventListener('click', function () {
+            const title = this.getAttribute('data-title');
+            delete cart[title];
+            updateCart();
+          });
+        });
+      }
+
+      // Function to update the cart count
+      function updateCartCount() {
+        let totalCount = 0;
+        for (const item of Object.values(cart)) {
+          totalCount += item.quantity;
+        }
+        cartCount.textContent = totalCount;
+        cartCount_mini.textContent = totalCount;
+      }
+    });
+
+  </script>
+</body>
+
+</html>
